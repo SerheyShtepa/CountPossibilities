@@ -10,6 +10,13 @@ def count_possibilities(n):
 
 
 if __name__ == '__main__':
-    n = int(input('Введите количество ступенек:'))
-    print(f'При количестве ступенек {n}, у вас есть', count_possibilities(n), 'способов подняться вверх.')
+    while True:
+        try:
+            n = int(input('Введите количество ступенек.\nДля остановки введите "0"\n:'))
+        except:
+            print('Некорректный ввод!!!')
+            continue
+        if n == 0:
+            break
+        print(f'При количестве ступенек {n}, у вас есть', count_possibilities(n), 'способов подняться вверх.')
 
